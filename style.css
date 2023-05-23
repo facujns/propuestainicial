@@ -144,15 +144,16 @@ nav.categorias ul li a {
     padding: 20px;
 }
 
-#map {
+#map{
     height: 600px;
+    position: relative;
 }
 
 .mapDiv{
     width: 70%;
     margin: 50px auto;
-
 }
+
 
 .boton-reportar {
     display: inline-block;
