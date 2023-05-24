@@ -20,10 +20,11 @@ body {
 /* Header */
 header {
     background-color: rgba(0, 79, 136, 1);
-    padding: 10px;
+    padding: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 55px;
 }
 
 .logo {
@@ -33,36 +34,44 @@ header {
 }
 
 .logo img {
-    max-width: 350px;
-    margin-bottom: 10px;
+    max-width: 250px;
+    margin-bottom: 5px;
 }
 
-/* Categorías */
-nav.categorias {
-    background-color: rgba(0, 79, 136, 0.8);
-    text-align: center;
-    padding: 5px 0;
+/* Estilos del nav */
+.categorias {
+  background-color: rgba(0, 79, 136, 0.8);
+  text-align: center;
+  padding: 10px;
 }
 
-nav.categorias ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+.categorias ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
-nav.categorias ul li {
-    display: inline;
-    margin: 0 25px;
+.categorias li {
+  display: inline-block;
+  margin-right: 10px;
+  box-shadow: 2px 2px 4px #1402cfc8;
+  border-radius: 3px;
 }
 
-nav.categorias ul li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-family: "Allan", sans-serif;
-    font-size: 32px;
-    font-weight: bold;
+.categorias a {
+  text-decoration: none;
+  color: #060139;
+  font-family: "Allan", sans-serif; /*no esta funcionando*/
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.categorias a:hover {
+  background-color: rgba(0, 79, 136, 1);
+  color: #fff;
 }
 
 /* Mini cuadro info */
@@ -76,6 +85,7 @@ nav.categorias ul li a {
     width: 400px;
     border-radius: 5px;
     overflow: hidden;
+    box-shadow: 2px 2px 4px #1402cfc8;
 }
 
 .mini-cuadro span {
@@ -94,8 +104,17 @@ nav.categorias ul li a {
 }
 
 /* Noticias Inicio */
+#noticiasYmapa {
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    border: solid 1px blue;
+}
+
 #noticias {
     padding: 20px;
+
 }
 
 .noticias-container {
