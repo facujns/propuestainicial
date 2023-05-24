@@ -56,15 +56,13 @@ header {
 .categorias li {
   display: inline-block;
   margin-right: 10px;
-  box-shadow: 2px 2px 4px #1402cfc8;
-  border-radius: 3px;
 }
 
 .categorias a {
   text-decoration: none;
-  color: #060139;
+  color: #fbfafa;
   font-family: "Allan", sans-serif; /*no esta funcionando*/
-  padding: 5px 10px;
+  padding: 2px 5px;
   border-radius: 5px;
   font-weight: bold;
 }
