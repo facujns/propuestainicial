@@ -1,88 +1,81 @@
-*{
-    padding: 0;
-    margin: 0;
-}
-
 /* Header */
+
 body {
-    margin-top: 75px;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f1f1;
 }
 
 #header {
-    position: fixed;
+    position: inherit;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 79, 136, 0.99);
+    background-color: rgba(9, 2, 107, 0.99);
     z-index: 1000;
     transition: top 0.3s;
-    height: 9% ;
-    justify-content: center;
-    
-   
 }
 
 .logo img {
-    max-width: 160px;
-    align-items: center;
-} 
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2px 20px;
-    color: #fff;
-    margin-top: 10px;
-
-
-    
+    max-width: 14em;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
-.menu {
-    list-style: none;
-    display: flex;
+@media (min-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2px 20px;
+        color: #fff;
+        border-bottom: 2px solid green;
+        background-color: #0347bb;
+        position: relative;
+        z-index: 3;
+    }
+    .menu {
+        list-style: none;
+        display: flex;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        padding-left: 0;
+    }
+    .menu li {
+        margin-left: 20px;
+    }
+    .menu li a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.7s;
+        font-size: 1em;
+        font-weight: bold;
+    }
+    .menu li a:hover {
+        color: #aaa;
+    }
 }
 
-.menu li {
-    margin-left: 20px;
-    margin-top: ;
-}
-
-.menu li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.7s;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.menu li a:hover {
-    color: #aaa;
-}
 
 /* Mini cuadro clima/pot/cortes servicio */
+
 .mini-cuadro {
-    background-color: rgba(0, 79, 136, 0.99);
+    background-color: rgba(12, 2, 153, 0.99);
     color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 8px auto;
-    width: 410px;
+    width: 35em;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0.1px 0.1px 4px green;
 }
 
 .mini-cuadro .column {
     flex: 1;
     font-size: 15px;
     display: block;
-    font-weight: bold;
-    margin-top: 5px;
+    margin-top: 0.5em;
+    margin-bottom: 0.2em;
     padding: 0 10px;
     text-align: center;
     border-right: 1px solid green;
@@ -99,48 +92,63 @@ body {
     cursor: pointer;
 }
 
+
 /* Seccion de noticias y mapa */
+
+.Box1 {
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin: 1em;
+    box-shadow: 1px 0.5px #aaa;
+    height: max-content;
+    float: left;
+    width: 50%;
+}
+
+.Grid-1 {
+    width: 50%;
+}
+
+.Grid-2 {
+    width: 40%;
+}
+
 #noticiasYmapa {
     display: flex;
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-gap: 5px;
-
-  
-
+    padding-top: 3em;
 }
 
+
 /* Seccion de noticias */
+
 #noticias {
     padding: 5px;
-    margin: 0 0 0 px;
 }
 
 .noticias-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin: 0 0 0 100px ;
-
-    height: 100%;
-
 }
 
 .noticia {
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     padding: 20px;
-    border-radius: 9px;
-    margin-top: 2px;
-    height: 104px;
-    text-align: center;
-
-        
+    border-left: none;
+    border-left: 5px solid rgb(12, 0, 180);
+    border-top: 1px solid #d1d1d1;
+    border-radius: 10px;
+    padding-bottom: 0;
 }
 
 .noticia h3 {
     font-size: 20px;
     margin-bottom: 10px;
-    width: 1;
 }
 
 .noticia p {
@@ -151,11 +159,29 @@ body {
 .noticia a {
     color: blue;
     text-decoration: none;
-
 }
 
 .noticia a:hover {
     text-decoration: underline;
+}
+
+.Box-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-top: 1em;
+}
+
+.Box-footer a {
+    color: #000;
+    text-decoration: underline;
+    text-align: center;
+    padding-top: 1em;
+    border-top: 1px solid #d1d1d1;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    width: 90%;
 }
 
 .ver-mas-noticias {
@@ -176,10 +202,11 @@ body {
     background-color: rgba(0, 79, 136, 0.8);
 }
 
+
 /* Mapa */
+
 #mapa {
     padding: 5px;
-
 }
 
 h2 {
@@ -190,29 +217,20 @@ h2 {
     width: 410px;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0.1px 0.1px 4px green;
+    /*box-shadow: 0.1px 0.1px 4px green;*/
 }
 
-#map{
-    height: 460px;
-    width: 50%;
+#map {
+    height: 450px;
+    width: 450px;
     position: relative;
     margin-top: 2px;
-    margin-top: 3%;
-     padding-left: 300px;
-    
 }
 
-.mapDiv{
-    
-    width: 65%;
+.mapDiv {
+    width: 70%;
     margin: 50px auto;
-  
-  
-    
-  
 }
-
 
 .boton-reportar {
     display: inline-block;
@@ -224,7 +242,9 @@ h2 {
     transition: background-color 0.3s ease;
 }
 
+
 /* Reportar Pérdida */
+
 .boton-reportar {
     display: block;
     text-decoration: none;
@@ -248,11 +268,29 @@ h2 {
     margin-top: 20px;
 }
 
+
 /* Footer */
+
 footer {
-    background-color: #f2f2f2;
+    background-color: #0347bb;
     padding: 20px;
     text-align: center;
-    background-color: rgba(0, 79, 136, 0.99);
+    color: white;
+    font-weight: bold;
 }
+
+
+/*.leaflet-top {
+/*    position: fixed;
+/*    z-index: 1000;
+/*    pointer-events: none;
+/*}
+/*
+/*.leaflet-left {
+/*    left: 0;
+/*}
+/*
+/*.leaflet-top {
+/*    top: 0;
+/*}*/ 
 

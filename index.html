@@ -5,88 +5,98 @@
     <meta charset="UTF-8" />
     <title>AquaCheck</title>
     <!--leaflet-->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
     <!--css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/CSS/style.css" />
 </head>
 
 <body>
+
     <header id="header">
-        <nav class="navbar">
+        <div class="container">
             <div class="logo">
                 <img src="/IMG/logo-top.png" alt="AquaCheck Logo" />
             </div>
-            <ul class="menu">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#tu-zona">Tu zona</a></li>
-                <li><a href="#reportar-perdida">Reportar Pérdida</a></li>
-                <li><a href="#consejos">Consejos</a></li>
-                <li><a href="#noticias">Noticias</a></li>
-                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main id="main-content">
-
-        <div class="mini-cuadro">
-            <div class="column">(nube/sol/rayito)</div>
-            <div class="column">Potabilidad</div>
-            <div class="column">Cortes de servicio</div>
         </div>
+    </header>
+    <nav class="navbar">
+        <ul class="container menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#tu-zona">Tu zona</a></li>
+            <li><a href="#reportar-perdida">Reportar Pérdida</a></li>
+            <li><a href="#consejos">Consejos</a></li>
+            <li><a href="#noticias">Noticias</a></li>
+            <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <main id="main-content">
 
-        <section id="noticiasYmapa">
-
-            <section class="column1" id="noticias">
-            
-
-                <div class="noticias-container">
-                    <h2>Últimas Noticias</h2>
-                    <div class="noticia">
-                        <h3>Título de la Noticia 1</h3>
-                        <p>Breve descripción de la noticia 1</p>
-                        <a href="noticia1.html">Ver Noticia Completa</a>
+            <div class="mini-cuadro">
+                <div class="column">(nube/sol/rayito)</div>
+                <div class="column">Potabilidad</div>
+                <div class="column">Cortes de servicio</div>
+            </div>
+            <div class="col">
+                <section id="noticiasYmapa Grid">
+                    <div class="Box1 Grid-1 col-6">
+                        <section class="column2" id="mapa">
+                            <h2 class="titulo-map">Pérdidas de Agua</h2>
+                            <div id="map" class="mapDiv"></div>
+                            <a href="#reportar" class="boton-reportar">Reportar Pérdida</a>
+                        </section>
                     </div>
-                    <div class="noticia">
-                        <h3>Título de la Noticia 2</h3>
-                        <p>Breve descripción de la noticia 2</p>
-                        <a href="noticia2.html">Ver Noticia Completa</a>
+                    <div class="Box1 Grid-2 col-5">
+                        <section class="column1" id="noticias">
+                            <h2>Últimas Noticias</h2>
+                            <div class="noticias-container">
+                                <div class="noticia">
+                                    <h3>Título de la Noticia 1</h3>
+                                    <p>Breve descripción de la noticia 1</p>
+                                    <a href="noticia1.html">Ver Noticia Completa</a>
+                                </div>
+                                <div class="noticia">
+                                    <h3>Título de la Noticia 2</h3>
+                                    <p>Breve descripción de la noticia 2</p>
+                                    <a href="noticia2.html">Ver Noticia Completa</a>
+                                </div>
+                            </div>
+                            <div class="Box-footer">
+                                <a class="noticias-footer" href="todas-las-noticias.html">Ver más noticias</a>
+                            </div>
+                        </section>
                     </div>
-                    <div class="noticia">
-                        <h3>Título de la Noticia 2</h3>
-                        <p>Breve descripción de la noticia 2</p>
-                        <a href="noticia2.html">Ver Noticia Completa</a>
+                    <div class="Box1 Grid-2 col-5">
+                        <section class="column1" id="Curiosidades">
+                            <h2>Curiosidades</h2>
+                            <div class="curiosidad-container">
+                                <div class="curiosidad">
+                                    <img src="IMG/gota de agua enseñando.jpg" style="height: 2.5em">
+                                    <h3 style="text-align: center;"> <a href="">Por qué el agua? </a></h3>
+                                </div>
+                            </div>
+                            <div class="Box-footer">
+                                <a class="noticias-footer" href="todas-las-noticias.html">Ver más Curiosidades</a>
+                            </div>
+                        </section>
                     </div>
-                    <div class="ver-mas-noticias">
-                        <a href="todas-las-noticias.html">Ver más noticias</a>
-                    </div>
-                </div>
+                </section>
+                <div style="clear: both;"></div>
+            </div>
 
-             
-            </section>
-
-            <section class="column2" id="mapa">
-                <h2 class="titulo-map">Pérdidas de Agua</h2>
-                <div id="map" class="mapDiv"></div>
-
-                <a href="#reportar" class="boton-reportar">Reportar Pérdida</a>
-            </section>
-        </section>
-
-    </main>
+        </main>
+    </div>
 
     <footer>
         <p>FOOTER</p>
     </footer>
 
     <!--script leaflet-->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"
-        charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
     <!--script AquaCheck-->
     <script src="/JS/main.js"></script>
     <script src="/JS/styles.js"></script>
