@@ -13,62 +13,62 @@
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="/IMG/logo-top.png" alt="AquaCheck Logo" />
-        </div>
+    <header id="header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="/IMG/logo-top.png" alt="AquaCheck Logo" />
+            </div>
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#tu-zona">Tu zona</a></li>
+                <li><a href="#reportar-perdida">Reportar Pérdida</a></li>
+                <li><a href="#consejos">Consejos</a></li>
+                <li><a href="#noticias">Noticias</a></li>
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav class="categorias">
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#noticias">Tu zona</a></li>
-            <li><a href="#reportar" class="mainCategory">Reportar Pérdida</a></li>
-            <li><a href="#consejos">Consejos</a></li>
-            <li><a href="#consejos">Noticias</a></li>
-            <li><a href="#nosotros">Sobre Nosotros</a></li>
-        </ul>
-    </nav>
+    <main id="main-content">
 
-    <div class="mini-cuadro">
-        <span>% de Lluvia</span>
-        <span class="estado-agua">Pot</span>
-        <span>% de Sal</span>
-    </div>
-
-<section id="noticiasYmapa">
-    <section class="column1" id="noticias">
-        <h2>Últimas Noticias</h2>
-        <div class="noticias-container">
-            <div class="noticia">
-                <h3>Título de la Noticia 1</h3>
-                <p>Breve descripción de la noticia 1</p>
-                <a href="noticia1.html">Ver Noticia Completa</a>
-            </div>
-            <div class="noticia">
-                <h3>Título de la Noticia 2</h3>
-                <p>Breve descripción de la noticia 2</p>
-                <a href="noticia2.html">Ver Noticia Completa</a>
-            </div>
-            <div class="noticia">
-                <h3>Título de la Noticia 3</h3>
-                <p>Breve descripción de la noticia 3</p>
-                <a href="noticia3.html">Ver Noticia Completa</a>
-            </div>
+        <div class="mini-cuadro">
+            <div class="column">(nube/sol/rayito)</div>
+            <div class="column">Potabilidad</div>
+            <div class="column">Cortes de servicio</div>
         </div>
-        <div class="ver-mas-noticias">
-            <a href="todas-las-noticias.html">Ver más noticias</a>
-        </div>
-    </section>
 
-    <section class="column2" id="mapa">
-        <h2 class="">Pérdidas de Agua</h2>
-        <div id="map" class="mapDiv"></div>
-        
+        <section id="noticiasYmapa">
 
-        <a href="#reportar" class="boton-reportar">Reportar Pérdida</a>
-    </section>
-</section>
+            <section class="column1" id="noticias">
+                <h2>Últimas Noticias</h2>
+
+                <div class="noticias-container">
+                    <div class="noticia">
+                        <h3>Título de la Noticia 1</h3>
+                        <p>Breve descripción de la noticia 1</p>
+                        <a href="noticia1.html">Ver Noticia Completa</a>
+                    </div>
+                    <div class="noticia">
+                        <h3>Título de la Noticia 2</h3>
+                        <p>Breve descripción de la noticia 2</p>
+                        <a href="noticia2.html">Ver Noticia Completa</a>
+                    </div>
+                </div>
+
+                <div class="ver-mas-noticias">
+                    <a href="todas-las-noticias.html">Ver más noticias</a>
+                </div>
+            </section>
+
+            <section class="column2" id="mapa">
+                <h2 class="titulo-map">Pérdidas de Agua</h2>
+                <div id="map" class="mapDiv"></div>
+
+                <a href="#reportar" class="boton-reportar">Reportar Pérdida</a>
+            </section>
+        </section>
+
+    </main>
 
     <footer>
         <p>FOOTER</p>
@@ -82,6 +82,7 @@
         charset="utf-8"></script>
     <!--script AquaCheck-->
     <script src="/JS/main.js"></script>
+    <script src="/JS/styles.js"></script>
 </body>
 
 </html>

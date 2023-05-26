@@ -1,141 +1,133 @@
-/* General */
-@font-face {
-    font-family: "Allan";
-    src: url("fonts/Allan-Bold.ttf") format("truetype");
-    font-weight: bold;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
 /* Header */
-header {
-    background-color: rgba(0, 79, 136, 1);
-    padding: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 55px;
+body {
+    margin-top: 75px;
+    padding: 0;
 }
 
-.logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 79, 136, 0.99);
+    z-index: 1000;
+    transition: top 0.3s;
 }
 
 .logo img {
-    max-width: 250px;
-    margin-bottom: 5px;
+    max-width: 160px;
+    align-items: center;
+} 
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 20px;
+    color: #fff;
+    border-bottom: 2px solid green;
 }
 
-/* Estilos del nav */
-.categorias {
-  background-color: rgba(0, 79, 136, 0.8);
-  text-align: center;
-  padding: 10px;
+.menu {
+    list-style: none;
+    display: flex;
 }
 
-.categorias ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
+.menu li {
+    margin-left: 20px;
 }
 
-.categorias li {
-  display: inline-block;
-  margin-right: 10px;
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.7s;
+    font-size: 15px;
+    font-weight: bold;
 }
 
-.categorias a {
-  text-decoration: none;
-  color: #fbfafa;
-  font-family: "Allan", sans-serif; /*no esta funcionando*/
-  padding: 2px 5px;
-  border-radius: 5px;
-  font-weight: bold;
+.menu li a:hover {
+    color: #aaa;
 }
 
-.categorias a:hover {
-  background-color: rgba(0, 79, 136, 1);
-  color: #fff;
-}
-
-/* Mini cuadro info */
+/* Mini cuadro clima/pot/cortes servicio */
 .mini-cuadro {
-    background-color: rgba(0, 79, 136, 0.8);
+    background-color: rgba(0, 79, 136, 0.99);
     color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 8px auto;
-    width: 400px;
-    border-radius: 5px;
+    width: 410px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 2px 2px 4px #1402cfc8;
+    box-shadow: 0.1px 0.1px 4px green;
 }
 
-.mini-cuadro span {
+.mini-cuadro .column {
+    flex: 1;
+    font-size: 15px;
     display: block;
     font-weight: bold;
     margin-top: 5px;
     padding: 0 10px;
     text-align: center;
-    width: 33.33%;
-    border-right: 1px solid rgba(255, 255, 255, 0.5);
-    line-height: 1;
+    border-right: 1px solid green;
+    line-height: 1.5;
+    transition: color 0.7s;
 }
 
-.mini-cuadro span:last-child {
+.mini-cuadro .column:last-child {
     border-right: none;
 }
 
-/* Noticias Inicio */
+.mini-cuadro .column:hover {
+    color: #aaa;
+    cursor: pointer;
+}
+
+/* Seccion de noticias y mapa */
 #noticiasYmapa {
     display: flex;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 3fr;
     grid-gap: 5px;
-    border: solid 1px blue;
 }
 
+/* Seccion de noticias */
 #noticias {
-    padding: 20px;
-
+    padding: 5px;
 }
 
 .noticias-container {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .noticia {
-    width: calc(33.33% - 30px);
-    margin-bottom: 10px;
-    padding: 10px;
     background-color: #f2f2f2;
-    border: 1px solid #ccc;
+    padding: 20px;
     border-radius: 5px;
+    margin-top: 2px;
 }
 
 .noticia h3 {
-    margin: 0;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .noticia p {
-    margin: 10px 0;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.noticia a {
+    color: blue;
+    text-decoration: none;
+}
+
+.noticia a:hover {
+    text-decoration: underline;
 }
 
 .ver-mas-noticias {
@@ -158,12 +150,25 @@ header {
 
 /* Mapa */
 #mapa {
-    padding: 20px;
+    padding: 5px;
+}
+
+h2 {
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px auto;
+    width: 410px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0.1px 0.1px 4px green;
 }
 
 #map{
-    height: 600px;
+    height: 450px;
+    width: 450px;
     position: relative;
+    margin-top: 2px;
 }
 
 .mapDiv{
